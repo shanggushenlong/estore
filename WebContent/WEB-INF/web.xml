@@ -1,13 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
   <display-name>estore</display-name>
-  
-  <!-- 全局参数配置开始 -->
   <context-param>
-  	<param-name>encode</param-name>
-  	<param-value>utf-8</param-value>
+    <param-name>encode</param-name>
+    <param-value>utf-8</param-value>
   </context-param>
-  
   <error-page>
     <error-code>404</error-code>
     <location>/error/404.jsp</location>
@@ -16,7 +13,6 @@
     <error-code>500</error-code>
     <location>/error/500.jsp</location>
   </error-page>
-  <!-- 全局参数配置结束 -->
   <welcome-file-list>
     <welcome-file>index.html</welcome-file>
     <welcome-file>index.htm</welcome-file>

@@ -31,7 +31,7 @@ public class EncodingFilter implements Filter {
 	
 	public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
 		//1.响应乱码,从web.xml文件中读取
-		response.setContentType("text/html,charset="+encode);
+		response.setContentType("text/html;charset="+encode);
 		//2.使用装饰类,改造和获取请求参数有关的方法,从而解决请求乱码	
 		chain.doFilter(new MyHttpServletRequest((HttpServletRequest) request), response);
 	}
