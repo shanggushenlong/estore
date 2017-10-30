@@ -6,7 +6,6 @@ package cn.itcast.factory;
  */
 
 import cn.itcast.utils.ConfigUtils;
-import sun.security.jca.GetInstance;
 
 public class BasicFacotry {
 	
@@ -22,11 +21,12 @@ public class BasicFacotry {
 	}
 	
 	//对应不同的类型
+	@SuppressWarnings("unchecked")
 	public <T> T getInstance(Class<T> clz){
-		String infClzName = clz.getSimpleName();
-		String impClzName = ConfigUtils.getProp(infClzName); //获取String类型的实现接口的实现类的全路径名 	
-		//生成实例
 		try {
+			String infClzName = clz.getSimpleName();
+			String impClzName = ConfigUtils.getProp(infClzName); //获取String类型的实现接口的实现类的全路径名 	
+			//生成实例
 			return (T) Class.forName(impClzName).newInstance();
 		} catch (InstantiationException | IllegalAccessException | ClassNotFoundException e) {
 			e.printStackTrace();
@@ -34,7 +34,6 @@ public class BasicFacotry {
 		}
 	}
  }
-
 
 
 

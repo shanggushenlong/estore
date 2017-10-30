@@ -142,7 +142,20 @@
 				在主页中点击注销
 				LogoutServlet  杀死session回到主页面
 
-
+------------商品模块
+			
+			4.商品添加(文件上传-->商品图片的上传)
+				主页中提供连接,添加商品
+				addProd.jsp   允许用户输入商品的信息,选择商品图片进行提交
+				AddProdServlet  上传图片 调用service中的方法增加商品信息
+				ProdService   增加商品
+				ProdDao       增加商品
+			5.商品列表(在jsp页面中展示出来)
+				主页中提供链接,商品名称
+				ProdListServlet   调用service中的方法,查询所有的商品,存入request域中,在jsp页面中显示
+				ProdService       查询所有的商品
+				ProdDao           查询所有的方法
+				
 
 
 

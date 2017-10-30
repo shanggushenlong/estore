@@ -18,6 +18,8 @@
 		</c:if>
 		<c:if test="${sessionScope.users != null }">
 			欢迎回来,${ sessionScope.users.username }!
+			<a href="${ pageContext.request.contextPath }/addProd.jsp">商品添加</a>
+			<a href="${ pageContext.request.contextPath }/ProdListServlet">商品列表</a>
 			<a href="${ pageContext.request.contextPath }/LogoutServlet">注销</a>
 		</c:if>
 </body>
