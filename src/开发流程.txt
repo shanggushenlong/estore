@@ -1,5 +1,5 @@
 一.estore简单电子商城(基于servlet/jsp基础)
-	----(1)用户模块
+		(1)用户模块
 			1).用户注册(验证码校验 js表单校验 后台数据校验 发送激活邮箱)
 			2).用户激活(定时器)
 			3).用户登录(记住用户名和密码)
@@ -23,15 +23,15 @@
 			
 			包结构:
 				com.itcast.web
-						  .service
-						  .dao
-						  .domain
-						  .utils
-						  .factory
-						  .exception
-						  .test
-						  .filter
-						  .listener
+					  .service
+					  .dao
+					  .domain
+					  .utils
+					  .factory
+					  .exception
+					  .test
+					  .filter
+					  .listener
 			导入第三方jar包
 				junit  jstl  beanutils mysql驱动 c3p0 dbutils commons-fileupload
 				
