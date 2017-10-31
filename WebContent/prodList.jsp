@@ -19,7 +19,7 @@
 			</tr>
 			<c:forEach items="${ requestScope.list }" var="prod">
 				<tr align="center">
-					<td><img  src="${ pageContext.request.contextPath }/ImgServlet?id=${prod.id}&&size=s"></td>
+					<td><a href="${ pageContext.request.contextPath }/ProdInfoServlet?id=${prod.id}"><img  src="${ pageContext.request.contextPath }/ImgServlet?id=${prod.id}&&size=s"></a></td>
 					<td>${ prod.name }</td>
 					<td>${ prod.price }元</td>
 					<td>

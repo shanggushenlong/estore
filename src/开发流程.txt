@@ -156,7 +156,13 @@
 				ProdService       查询所有的商品
 				ProdDao           查询所有的方法
 				
-
+			6.商品详细信息
+				商品列表页面 允许点击图片
+				ProdInfoServlet 获取要查询的商品id 根据id查找商品,存入request域中,带到页面显示
+				ProdService     根据id查询商品
+				ProdDao         根据id查询商品
+				ProdInfo.jsp    显示商品的详细信息
+				
 
 
 
