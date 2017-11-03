@@ -17,9 +17,10 @@
 			<a href="${ pageContext.request.contextPath }/login.jsp">登录</a>
 		</c:if>
 		<c:if test="${sessionScope.users != null }">
-			欢迎回来,${ sessionScope.users.username }!
+			欢迎回来,${ sessionScope.users.username }!<br>
 			<a href="${ pageContext.request.contextPath }/addProd.jsp">商品添加</a>
 			<a href="${ pageContext.request.contextPath }/ProdListServlet">商品列表</a>
+			<a href="${ pageContext.request.contextPath }/cart.jsp">我的购物车</a>
 			<a href="${ pageContext.request.contextPath }/LogoutServlet">注销</a>
 		</c:if>
 </body>

@@ -10,6 +10,10 @@
 <body>
 	<div align="center">
 		<h1>商品列表</h1>
+		<div align="right">
+			<a href="${ pageContext.request.contextPath }/index.jsp">回到主页</a>
+			<a href="${ pageContext.request.contextPath }/cart.jsp">我的购物车</a>
+		</div>
 		<table border="1" width="100%">
 			<tr bgcolor="silver">
 				<th>商品图片</th>

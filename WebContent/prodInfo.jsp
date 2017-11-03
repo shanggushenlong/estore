@@ -35,7 +35,7 @@
 			商品单价:${ prod.price }<br>
 			库存数量:${ prod.pnum }<br>
 			描述信息:${ prod.description }<br>
-			<a href="${ pageContext.request.contextPath }/AddCartSertvlet?id=${prod.id}"><img src="${ pageContext.request.contextPath }/img/buy.bmp" id="buyBmp"/></a>
+			<a href="${ pageContext.request.contextPath }/AddCartServlet?id=${prod.id}"><img src="${ pageContext.request.contextPath }/img/buy.bmp" id="buyBmp"/></a>
 		</div>
 	</div>
 	<hr style="clear: both;">  <%--添加css样式,使得hr线不浮动 --%>
