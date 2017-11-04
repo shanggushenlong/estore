@@ -14,6 +14,10 @@
 		color: red;
 		font-weight: bold;
 	}
+	.imgC{
+		cursor: pointer;    <%--手形状,点击时候变化--%>
+	}
+	
 </style>
 <script type="text/javascript">
 	<%--当数量栏的输入框的值改变的时候,触发一个js函数,onchange事件--%>
@@ -71,9 +75,9 @@
 					<td>${entry.key.category }</td>
 					<td>${entry.key.price }</td>										
 					<td>
-						<img src="${ pageContext.request.contextPath }/img/del.png">      <%--将当前的id和value值传入 --%>
+						<img src="${ pageContext.request.contextPath }/img/del.png" class="imgC">      <%--将当前的id和value值传入 --%>
 						<input type="text" value="${entry.value }" style="width: 35px;" onchange="changeNum('${entry.key.id }',this,'${entry.value }')">
-						<img src="${ pageContext.request.contextPath }/img/add.png">
+						<img src="${ pageContext.request.contextPath }/img/add.png" class="imgC">
 					</td>
 					<td>${entry.key.price * entry.value }元</td>
 					<td><a href="${ pageContext.request.contextPath }/DelCartServlet?id=${entry.key.id}">删除</a></td>
