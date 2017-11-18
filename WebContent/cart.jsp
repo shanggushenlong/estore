@@ -10,7 +10,7 @@
 		background-color: silver;
 	}
 	#moneyId{
-		font-size: 35px;
+		font-size: 30px;
 		color: red;
 		font-weight: bold;
 	}
@@ -85,7 +85,10 @@
 				</tr>
 			</c:forEach>
 		</table>
-		<div id="moneyId" align="right">总价:${ money }元</div>  <%--计算所有商品的最后总价,迭代循环,设置一个var变量值 --%>
+		<div id="moneyId" align="right"> <%--计算所有商品的最后总价,迭代循环,设置一个var变量值 --%>
+			总价:${ money }元 <br>
+			<a href="${ pageContext.request.contextPath }/addOrder.jsp"><img src="${ pageContext.request.contextPath }/img/gotoorder.bmp"></a>
+		</div> 
 	</c:if>
 </body>
 </html>

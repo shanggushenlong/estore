@@ -20,15 +20,15 @@ public class ImgServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		ProdService service = new ProdServiceImpl();
 		String id = request.getParameter("id");
-		Product product = service.findProdById(id);
+		Product prod = service.findProdById(id);
 		if("s".equals(request.getParameter("size"))){
-			String url = product.getImgurl();
+			String url = prod.getImgurl();
 			//重新编写一个新的url
 			url = url.substring(0,url.lastIndexOf("."))+"_s"+url.substring(url.lastIndexOf("."));
 			request.getRequestDispatcher(url).forward(request, response);
 		}else{
 			//转发到img的地址
-			request.getRequestDispatcher(product.getImgurl()).forward(request, response);
+			request.getRequestDispatcher(prod.getImgurl()).forward(request, response);
 		}
 	}
 
@@ -36,5 +36,4 @@ public class ImgServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		doGet(request, response);
 	}
-
 }

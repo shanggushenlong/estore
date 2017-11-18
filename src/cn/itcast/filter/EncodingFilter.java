@@ -75,12 +75,12 @@ public class EncodingFilter implements Filter {
 		@Override
 		public String[] getParameterValues(String name) {
 			// TODO Auto-generated method stub
-			return super.getParameterValues(name);
+			return getParameterMap().get(name);
 		}
 		@Override
 		public String getParameter(String name) {
-			// TODO Auto-generated method stub
-			return super.getParameter(name);
+			String [] vs = getParameterValues(name);
+			return vs == null ? null : vs[0];
 		}
 	}
 

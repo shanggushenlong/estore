@@ -53,4 +53,17 @@ public class UserDaoImpl implements UserDao{
 		}
 	}
 
+	@Override
+	public Users findById(int user_id) {
+		String sql = "select * from users where id = ?";
+		QueryRunner runner = new QueryRunner(DaoUtils.getSource());
+		
+		try {
+			return runner.query(sql, new BeanHandler<Users>(Users.class),user_id);
+		} catch (SQLException e) {
+			e.printStackTrace();
+			throw new MsgException();
+		}
+	}
+
 }

@@ -22,5 +22,12 @@ public interface UserDao {
 	 * @return         
 	 */
 	Users findUserByNameAndPsw(String username, String password);
+	
+	/**
+	 * 根据用户id查找用户
+	 * @param user_id
+	 * @return
+	 */
+	Users findById(int user_id);
 
 }

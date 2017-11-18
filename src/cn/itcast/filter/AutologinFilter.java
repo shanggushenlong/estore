@@ -22,9 +22,6 @@ import cn.itcast.domain.Users;
 import cn.itcast.factory.BasicFacotry;
 import cn.itcast.service.UserService;
 
-/**
- * Servlet Filter implementation class AutologinFilter
- */
 @WebFilter("/AutologinFilter")
 public class AutologinFilter implements Filter {
 
@@ -38,7 +35,7 @@ public class AutologinFilter implements Filter {
 		HttpServletRequest req = (HttpServletRequest) request;
 		HttpServletResponse resp = (HttpServletResponse) response;
 		//1.只有登录才能自动登录
-		if(req.getSession(false) == null || req.getSession().getAttribute("uses") == null){
+		if(req.getSession(false) == null || req.getSession().getAttribute("users") == null){
 			//2.只有带了自动登录cookie的用户才能自动登录
 			Cookie cs[] = req.getCookies();
 			Cookie findC = null;
@@ -63,7 +60,7 @@ public class AutologinFilter implements Filter {
 			}
 		}
 		
-		chain.doFilter(request, response);
+		chain.doFilter(req, resp);
 	}
 
 	public void init(FilterConfig fConfig) throws ServletException {

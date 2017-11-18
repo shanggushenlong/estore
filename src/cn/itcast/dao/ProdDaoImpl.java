@@ -7,10 +7,9 @@ import org.apache.commons.dbutils.QueryRunner;
 import org.apache.commons.dbutils.handlers.BeanHandler;
 import org.apache.commons.dbutils.handlers.BeanListHandler;
 
-import com.sun.org.apache.bcel.internal.generic.NEW;
-
 import cn.itcast.domain.Product;
 import cn.itcast.utils.DaoUtils;
+import cn.itcast.utils.TransactionManager;
 
 public class ProdDaoImpl implements ProdDao{
 
@@ -47,5 +46,29 @@ public class ProdDaoImpl implements ProdDao{
 			e.printStackTrace();
 			throw new RuntimeException();
 		}
+	}
+
+	@Override
+	public void updatePnum(String id, int pnum) throws SQLException {
+		String sql = "update products set pnum = ? where id = ?";
+		QueryRunner runner = new QueryRunner();
+		runner.update(TransactionManager.getConnection(),sql,pnum,id);	
+	}
+
+	@Override
+	public Product findById2(String product_id) throws SQLException {
+		String sql = "select * from products where id =? for update";   //在此处加入 "for update"两个关键字,加入排它锁
+		QueryRunner runner = new QueryRunner();
+		return runner.query(TransactionManager.getConnection(),sql, new BeanHandler<Product>(Product.class),product_id);
 	}	
 }
+
+
+
+
+
+
+
+
+
+

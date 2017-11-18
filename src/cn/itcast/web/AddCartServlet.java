@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import cn.itcast.domain.Product;
+import cn.itcast.factory.BasicFacotry;
 import cn.itcast.service.ProdService;
 import cn.itcast.service.ProdServiceImpl;
 
@@ -18,10 +19,12 @@ public class AddCartServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
   
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	
+		ProdService service = BasicFacotry.getFactory().getInstance(ProdService.class);
+		
 		//1.获取要加入购物车的商品的id
 		String id = request.getParameter("id");
 		//2.调用service根据id找到商品
-		ProdService service = new ProdServiceImpl();
 		Product prod = service.findProdById(id);
 		//3.获取购物车
 		Map<Product, Integer> cartmap = (Map<Product, Integer>) request.getSession().getAttribute("cartmap");

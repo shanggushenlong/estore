@@ -21,6 +21,7 @@
 			<a href="${ pageContext.request.contextPath }/addProd.jsp">商品添加</a>
 			<a href="${ pageContext.request.contextPath }/ProdListServlet">商品列表</a>
 			<a href="${ pageContext.request.contextPath }/cart.jsp">我的购物车</a>
+			<a href="${ pageContext.request.contextPath }/OrderListServlet">订单列表</a>
 			<a href="${ pageContext.request.contextPath }/LogoutServlet">注销</a>
 		</c:if>
 </body>
