@@ -20,5 +20,11 @@ public interface OrderService {
 	 * @throws  
 	 */
 	List<OrderInfo> findOrderByUserId(int user_id);
+	
+	/**
+	 * 根据订单的id删除订单
+	 * @param id
+	 */
+	void delOrderById(String id);
 
 }

@@ -1,5 +1,6 @@
 package cn.itcast.service;
 
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -14,6 +15,7 @@ import cn.itcast.domain.OrderItem;
 import cn.itcast.domain.Product;
 import cn.itcast.domain.Users;
 import cn.itcast.factory.BasicFacotry;
+import cn.itcast.utils.DaoUtils;
 import cn.itcast.utils.TransactionManager;
 
 public class OrderServiceImpl implements OrderService{
@@ -76,6 +78,25 @@ public class OrderServiceImpl implements OrderService{
 		}	
 		//3.返回
 		return oi_list;
+	}
+
+
+	@Override
+	public void delOrderById(String id) {
+		List<OrderItem> list = order_dao.findOrderItemByOrderId(id);
+		for(OrderItem item : list){
+			//1.将商品的库存数量加回去
+			Product product = prod_dao.findById(item.getProduct_id());
+			try {
+				prod_dao.updatePnum(product.getId(), product.getPnum()+item.getBuynum());
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
+		//2.删除订单项
+		order_dao.delOrderItemByOrderId(id);
+		//3.删除订单
+		order_dao.delOrderByOrderId(id);
 	}
 
 }

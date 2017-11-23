@@ -22,7 +22,7 @@
 			支付状态:
 				<c:if test="${ oi.order.paystate == 0}">
 					<font color="red">未支付</font>
-					<a href="#">删除订单</a>
+					<a href="${ pageContext.request.contextPath }/DelOrderServlet?id=${oi.order.id}">删除订单</a>
 					<a href="#">在线支付</a>
 				</c:if>
 				<c:if test="${ oi.order.paystate != 0 }">
@@ -51,8 +51,3 @@
 	</c:forEach>
 </body>
 </html>
-
-
-
-
-
