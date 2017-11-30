@@ -26,5 +26,19 @@ public interface OrderService {
 	 * @param id
 	 */
 	void delOrderById(String id);
+	
+	/**
+	 * 根据订单id查询相应的订单
+	 * @param id 订单id
+	 * @return
+	 */
+	Order findOrderById(String id);
+	
+	/**
+	 * 修改支付状态
+	 * @param id 订单id 
+	 * @param paystate 支付状态
+	 */
+	void updateState(String id, int paystate);
 
 }

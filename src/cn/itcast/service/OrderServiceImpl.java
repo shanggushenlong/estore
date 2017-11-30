@@ -99,6 +99,18 @@ public class OrderServiceImpl implements OrderService{
 		order_dao.delOrderByOrderId(id);
 	}
 
+
+	@Override
+	public Order findOrderById(String id) {
+		return order_dao.findOrderById(id);
+	}
+
+
+	@Override
+	public void updateState(String id, int paystate) {
+		order_dao.updateState(id,paystate);
+	}
+
 }
 
 

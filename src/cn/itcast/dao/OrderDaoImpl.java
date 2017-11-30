@@ -4,6 +4,7 @@ import java.sql.SQLException;
 import java.util.List;
 
 import org.apache.commons.dbutils.QueryRunner;
+import org.apache.commons.dbutils.handlers.BeanHandler;
 import org.apache.commons.dbutils.handlers.BeanListHandler;
 
 import com.sun.org.apache.bcel.internal.generic.NEW;
@@ -102,6 +103,32 @@ public class OrderDaoImpl implements OrderDao{
 		QueryRunner runner = new QueryRunner(DaoUtils.getSource());
 		try {
 			runner.update(sql,id);
+		} catch (SQLException e) {
+			e.printStackTrace();
+			throw new RuntimeException(e);
+		}
+	}
+
+
+	@Override
+	public Order findOrderById(String id) {
+		String sql = "select * from orders where user_id = ?";
+		QueryRunner runner = new QueryRunner(DaoUtils.getSource());
+		try {
+			return runner.query(sql, new BeanHandler<Order>(Order.class),id);
+		} catch (SQLException e) {
+			e.printStackTrace();
+			throw new RuntimeException(e);
+		}
+	}
+
+
+	@Override
+	public void updateState(String id, int paystate) {
+		String sql = "update orders set paystate = ? where id = ?";
+		QueryRunner runner = new QueryRunner(DaoUtils.getSource());
+		try {
+			runner.update(sql, paystate,id);
 		} catch (SQLException e) {
 			e.printStackTrace();
 			throw new RuntimeException(e);

@@ -47,5 +47,19 @@ public interface OrderDao {
 	 * @param id
 	 */
 	void delOrderByOrderId(String id);
+	
+	/**
+	 * 根据订单id查找订单
+	 * @param id
+	 * @return
+	 */
+	Order findOrderById(String id);
+	
+	/**
+	 * 根据订单id修改订单的支付状态
+	 * @param id 订单id
+	 * @param paystate 支付状态
+	 */
+	void updateState(String id, int paystate);
 
 }
