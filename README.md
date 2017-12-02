@@ -82,3 +82,5 @@ estore网上商城
         );
         
     详细开发流程 https://github.com/shanggushenlong/estore/blob/master/src/%E5%BC%80%E5%8F%91%E6%B5%81%E7%A8%8B.txt   
+   	
+    效果展示 https://github.com/shanggushenlong/estore/tree/master/WebContent/img
