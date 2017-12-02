@@ -85,10 +85,10 @@ estore网上商城
     
 三.效果展示
 ===
-    ![image](https://github.com/shanggushenlong/estore/blob/master/WebContent/img/login.png)
-    ![image](https://github.com/shanggushenlong/estore/blob/master/WebContent/img/addProd.png)
-    ![image](https://github.com/shanggushenlong/estore/blob/master/WebContent/img/prodList.png)
-    ![image](https://github.com/shanggushenlong/estore/blob/master/WebContent/img/orderList.png)
-    ![image](https://github.com/shanggushenlong/estore/blob/master/WebContent/img/cart.png)
-    ![image](https://github.com/shanggushenlong/estore/blob/master/WebContent/img/pay.png)
+    ![Image text](https://github.com/shanggushenlong/estore/blob/master/WebContent/img/login.png)
+    ![Image text](https://github.com/shanggushenlong/estore/blob/master/WebContent/img/addProd.png)
+    ![Image text](https://github.com/shanggushenlong/estore/blob/master/WebContent/img/prodList.png)
+    ![Image text](https://github.com/shanggushenlong/estore/blob/master/WebContent/img/orderList.png)
+    ![Image text](https://github.com/shanggushenlong/estore/blob/master/WebContent/img/cart.png)
+    ![Image text](https://github.com/shanggushenlong/estore/blob/master/WebContent/img/pay.png)
           
