@@ -81,4 +81,4 @@ estore网上商城
           foreign key(product_id) references products(id)
         );
         
-    详细开发[开发流程](https://github.com/shanggushenlong/estore/blob/master/src/%E5%BC%80%E5%8F%91%E6%B5%81%E7%A8%8B.txt)      
+    详细开发流程 https://github.com/shanggushenlong/estore/blob/master/src/%E5%BC%80%E5%8F%91%E6%B5%81%E7%A8%8B.txt   
