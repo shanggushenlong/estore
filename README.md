@@ -1,5 +1,6 @@
 estore网上商城
 ==== 
+运用javaweb的基础知识,没有使用框架,使用了原生jsp/servlet,前台页面做的并不是很好看,但是后台基本的逻辑都涉及到了
 一.estore简单电子商城(基于servlet/jsp基础)
 -------  
 		(1)用户模块
@@ -82,5 +83,5 @@ estore网上商城
         );
         
     详细开发流程 https://github.com/shanggushenlong/estore/blob/master/src/%E5%BC%80%E5%8F%91%E6%B5%81%E7%A8%8B.txt   
-   	
-    效果展示 https://github.com/shanggushenlong/estore/tree/master/WebContent/img
+   
+    效果图片 https://github.com/shanggushenlong/estore/tree/master/WebContent/img
